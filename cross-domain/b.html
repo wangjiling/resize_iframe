@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+            outline: 0;
+        }
+        body{
+            background-color: #f5f8fa;
+            font-size: 16px;
+            margin: 50px 20px;
+        }
+        p{
+            height: 1000px;
+            background-color: red;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <p>www.vincent2.com</p>
+</div>
+
+<iframe id="agent_iframe"  height="0" width="0"  src="http://www.vincent1.com:3000/cross-domain/agent.html" style="display:none" ></iframe>
+
+</body>
+<script type="text/javascript">
+    (function autoHeight(){
+        var b_width = Math.max(document.body.scrollWidth,document.body.clientWidth);
+        var b_height = Math.max(document.body.scrollHeight,document.body.clientHeight);
+        var c_iframe = document.getElementById("agent_iframe");
+        c_iframe.src = c_iframe.src + "#" + b_width + "|" + b_height;  // 这里通过hash传递b.html的宽高
+    })();
+</script>
+</html>

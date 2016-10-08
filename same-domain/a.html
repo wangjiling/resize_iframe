@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+            outline: 0;
+        }
+        body{
+            background-color: #f5f8fa;
+            font-size: 16px;
+            margin: 50px 20px;
+        }
+        p{
+            text-align: center;
+        }
+        iframe{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<p>a.vincent.com</p>
+
+<iframe src="http://b.vincent.com:3000/same-domain/b.html" id="a_iframe" frameborder="0" scrolling="no"></iframe>
+
+</body>
+<script type="text/javascript">
+    document.domain = "vincent.com";
+    function setIframeHeight(iframe){
+        var subWeb = iframe.contentDocument ? iframe.contentDocument : iframe.contentWindow.document;
+        if (iframe && subWeb) {
+            iframe.height = subWeb.body.scrollHeight;
+            iframe.width = subWeb.body.scrollWidth;
+        }
+    }
+    document.getElementById('a_iframe').onload = function () {
+        setIframeHeight(this);
+    };
+</script>
+</html>
