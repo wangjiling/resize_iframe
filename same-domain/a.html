@@ -35,8 +35,8 @@
     function setIframeHeight(iframe){
         var subWeb = iframe.contentDocument ? iframe.contentDocument : iframe.contentWindow.document;
         if (iframe && subWeb) {
-            iframe.height = subWeb.body.scrollHeight;
-            iframe.width = subWeb.body.scrollWidth;
+            iframe.height = subWeb.body.clientHeight || subWeb.body.offsetHeight || subWeb.body.scrollHeight;
+            iframe.width = subWeb.body.scrollWidth || subWeb.body.offsetWidth || subWeb.body.scrollWidth;
         }
     }
     document.getElementById('a_iframe').onload = function () {
