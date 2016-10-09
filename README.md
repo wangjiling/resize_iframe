@@ -20,3 +20,5 @@ resize iframe
   http://www.vincent1.com:3000/cross-domain/a.html
 
   http://a.vincent.com:3000/same-domain/a.html
+
+  http://www.vincent1.com:3000/easyxdm/resize_iframe.html
