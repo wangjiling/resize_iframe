@@ -30,6 +30,8 @@
 </body>
 <script type="text/javascript">
     (function autoHeight(){
+        console.log('clientWidth: ' + document.body.clientWidth + ' offsetWidth: ' + document.body.offsetWidth + ' scrollWidth: ' + document.body.scrollWidth);
+        console.log('clientHeight: ' + document.body.clientHeight + ' offsetHeight: ' + document.body.offsetHeight + ' scrollHeight: ' + document.body.scrollHeight);
         var b_width = document.body.clientWidth || document.body.offsetWidth || document.body.scrollWidth;
         var b_height = document.body.clientHeight || document.body.offsetHeight || document.body.scrollHeight;
         var c_iframe = document.getElementById("agent_iframe");
