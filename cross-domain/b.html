@@ -30,8 +30,8 @@
 </body>
 <script type="text/javascript">
     (function autoHeight(){
-        var b_width = document.body.clientWidth || document.body.offsetWidth || document.body.scrollWidth;
-        var b_height = document.body.clientHeight || document.body.offsetHeight || document.body.scrollHeight;
+        var b_width = document.body.scrollWidth || document.body.clientWidth || document.body.offsetWidth;
+        var b_height = document.body.scrollHeight || document.body.clientHeight || document.body.offsetHeight;
         var c_iframe = document.getElementById("agent_iframe");
         c_iframe.src = c_iframe.src + "#" + b_width + "|" + b_height;  // 这里通过hash传递b.html的宽高
     })();
