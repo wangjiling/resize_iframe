@@ -22,3 +22,15 @@ resize iframe
   http://a.vincent.com:3000/same-domain/a.html
 
   http://www.vincent1.com:3000/easyxdm/resize_iframe.html
+
+5、support browsers:
+
+  IE7+
+
+  Opera 9+
+
+  Firefox
+
+  Safari 4+
+
+  Chrome 2+
