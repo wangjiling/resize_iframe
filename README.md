@@ -29,7 +29,7 @@ resize iframe
 
   Opera 9+
 
-  Firefox
+  Firefox 3+
 
   Safari 4+
 
